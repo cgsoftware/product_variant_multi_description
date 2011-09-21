@@ -18,16 +18,16 @@
 #
 ##############################################################################
 {
-    "name" : "Products with multi-level variants",
+    "name" : "Spedizionieri Liberi",
     "version" : "1.0",
     "author" : "Tiny",
     "category" : "Generic Modules/Inventory Control",
-    "description":""" Aggiunge delle descrizini di riga e di corpo sulle tabelle varianti
+    "description":"""Elimina l'obbligatorietà del codice articolo  e del partner sulle spedizioni
     """,
     "depends" : ["base", "product", "sale"],
     "init_xml" : [],
-    "demo_xml" : ["demo_data.xml"],
-    "update_xml" : ['product_view.xml'
+    "demo_xml" : [""],
+    "update_xml" : ['delivery_view.xml'
     ],
     "active": False,
     "installable": True

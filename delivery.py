@@ -25,28 +25,18 @@ from osv import fields, osv
 #
 # Dimensions Definition
 #
-class product_variant_dimension_type(osv.osv):
-     _inherit = "product.variant.dimension.type"
+class delivery_carrier(osv.osv):
+     _inherit = "delivery.carrier"
 
 
      _columns = {
-        'desc_type' : fields.char('Descrizione', size=64),
+                 'partner_id': fields.many2one('res.partner', 'Carrier Partner', required=False),
+                 'product_id': fields.many2one('product.product', 'Delivery Product', required=False),
+
     }
 
 
 
-product_variant_dimension_type()
-
-
-class product_variant_dimension_value(osv.osv):
-    _inherit = "product.variant.dimension.value"
-
-
-
-    _columns = {
-        'desc_value' : fields.char('Descrizione Variante', size=64, required=False),
-    }
-
-product_variant_dimension_value()
+delivery_carrier()
 
 
